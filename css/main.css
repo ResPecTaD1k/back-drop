@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700;800&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -10,7 +11,9 @@ ol, ul {
 }
 
 body {
-  background-color: gray;
+  background: -webkit-gradient(linear, left top, right bottom, from(#F9345F), to(#4D2A92));
+  background: linear-gradient(to bottom right, #F9345F, #4D2A92);
+  font-family: "Open Sans", sans-serif;
 }
 
 .container {
@@ -32,13 +35,24 @@ body {
           flex-direction: column;
 }
 
+.main__card {
+  padding: 30px 0;
+  background-color: #21C09D;
+  color: #fff;
+  border: transparent;
+  -webkit-box-shadow: -15px 23px 6px 8px rgba(16, 3, 3, 0.737254902);
+          box-shadow: -15px 23px 6px 8px rgba(16, 3, 3, 0.737254902);
+}
+
 .main__title {
   color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 .main__tables {
   width: 700px;
-  height: 80px;
+  height: 50vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,7 +63,13 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: red;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 0 0 0 15px;
+  gap: 0.5px;
+  position: relative;
+}
+.main__tables::-webkit-scrollbar {
   overflow-y: hidden;
 }
 .main__tables .main__item {
@@ -57,13 +77,44 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-bottom: 0.3px solid rgba(255, 255, 255, 0.6980392157);
+  padding: 10px 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
 }
-.main__tables .main__item li {
-  border: 1px solid black;
+.main__tables .main__item:hover {
+  -webkit-transform: scale(1.01);
+          transform: scale(1.01);
+  -webkit-box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.7450980392);
+          box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.7450980392);
+}
+.main__tables .main__item2 {
+  position: sticky;
+  top: 0;
+  border: none;
+  color: black;
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+}
+.main__tables .main__item2:hover {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.main__tables .main__item2 li {
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.main__tables li {
+  padding: 10px;
+  width: 175px;
+}
+.main__tables .main__inner-item {
+  width: 300px;
 }/*# sourceMappingURL=main.css.map */
